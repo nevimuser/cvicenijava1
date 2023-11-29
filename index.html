@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výpočet přepony trojúhelníka</title>
+</head>
+<body>
+
+<script>
+    function vypocetPrepony(odvesnaA, odvesnaB) {
+        return Math.sqrt(odvesnaA * odvesnaA + odvesnaB * odvesnaB);
+    }
+    var odvesnaA = parseFloat(prompt("Zadejte délku první odvěsny:"));
+    var odvesnaB = parseFloat(prompt("Zadejte délku druhé odvěsny:"));
+
+    if (isNaN(odvesnaA) || isNaN(odvesnaB)) {
+        alert("Zadávejte pouze číselné hodnoty. Prosím, obnovte stránku a zkuste to znovu.");
+    } else {
+
+        var prepona = vypocetPrepony(odvesnaA, odvesnaB);
+        alert("Délka přepony pravoúhlého trojúhelníka s odvěsnami délky " + odvesnaA + " a " + odvesnaB + " je: " + prepona.toFixed(2));
+    }
+</script>
+
+</body>
+</html>
+
